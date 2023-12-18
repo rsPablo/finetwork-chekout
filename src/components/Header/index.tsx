@@ -1,6 +1,7 @@
+import { FC, memo } from "react";
 import "./styles.scss";
 
-const Header = () => {
+const Header: FC = () => {
   return (
     <article className="header-container">
       <div className="header-container__menu">
@@ -15,4 +16,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

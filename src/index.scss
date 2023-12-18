@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Nunito sans";   /*Can be any text*/
+  src: local("Nunito sans"), url("./font/NunitoSans-Regular.ttf") format("truetype");
+}
+* {
+  margin: 0;
+}
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #eff2fc;
+  font-family: Nunito sans, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+
