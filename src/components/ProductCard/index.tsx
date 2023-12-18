@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import {
   Card,
   CardBody,
@@ -7,8 +7,9 @@ import {
   H2,
   Button,
 } from "@finetwork/ui";
+import { ProductCardProps } from "./type";
 
-const ProductCard: FC = () => {
+const ProductCard: FC<ProductCardProps> = ({ displayName, price }) => {
   return (
     <Card
       hoverAnimation
@@ -31,7 +32,7 @@ const ProductCard: FC = () => {
         },
       }}
     >
-      <CardHeader>Fibra 600Mb</CardHeader>
+      <CardHeader>{displayName}</CardHeader>
       <CardBody>
         <H2
           isHighLight
@@ -39,7 +40,7 @@ const ProductCard: FC = () => {
           highLightKind="secondary"
           css={{ color: "#000" }}
         >
-          14'90€
+          {`${price}€`}
         </H2>
       </CardBody>
       <CardFooter>
@@ -51,4 +52,4 @@ const ProductCard: FC = () => {
   );
 };
 
-export default ProductCard;
+export default memo(ProductCard);
