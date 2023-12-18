@@ -5,7 +5,7 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     .separator {
         border-bottom: 3px solid black;
         &__purple {
@@ -25,7 +25,7 @@
     }
     .promotion-container {
         display: flex;
-        gap: 2rem;
+        gap: 1rem;
         @media (max-width: 900px) {
             flex-direction: column;
         }
@@ -52,13 +52,11 @@
     .summary-container {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
       .row {
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
-
     }
-   
 }

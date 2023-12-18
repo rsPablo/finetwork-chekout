@@ -6,6 +6,8 @@ import {
   CardHeader,
   H2,
   Button,
+  H3,
+  H4,
 } from "@finetwork/ui";
 import { useNavigate } from "react-router-dom";
 import { ProductCardProps } from "./type";
@@ -35,13 +37,17 @@ const ProductCard: FC<ProductCardProps> = ({ displayName, price }) => {
         },
       }}
     >
-      <CardHeader>{displayName}</CardHeader>
+      <CardHeader>
+        <H4 align="center">{displayName}</H4>
+      </CardHeader>
       <CardBody>
         <H2
           isHighLight
           align="center"
           highLightKind="secondary"
-          css={{ color: "#000" }}
+          css={{
+            color: "#000",
+          }}
         >
           {`${price}€`}
         </H2>
