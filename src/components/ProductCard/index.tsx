@@ -7,9 +7,12 @@ import {
   H2,
   Button,
 } from "@finetwork/ui";
+import { useNavigate } from "react-router-dom";
 import { ProductCardProps } from "./type";
 
 const ProductCard: FC<ProductCardProps> = ({ displayName, price }) => {
+  const navigate = useNavigate();
+
   return (
     <Card
       hoverAnimation
@@ -44,9 +47,15 @@ const ProductCard: FC<ProductCardProps> = ({ displayName, price }) => {
         </H2>
       </CardBody>
       <CardFooter>
-        <Button kind="secondary" className="button">
-          La quiero
-        </Button>
+        <div
+          onClick={() => {
+            navigate("/checkout");
+          }}
+        >
+          <Button kind="secondary" className="button">
+            La quiero
+          </Button>
+        </div>
       </CardFooter>
     </Card>
   );
