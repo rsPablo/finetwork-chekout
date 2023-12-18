@@ -5,10 +5,15 @@ import { ThemeProvider } from "@finetwork/ui";
 import theme from "../styles/theme.ts";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./views/HomePage/index.tsx";
+import Checkout from "./views/Checkout/index.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+  },
+  {
+    path: "/checkout",
+    element: <Checkout />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(

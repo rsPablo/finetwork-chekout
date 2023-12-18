@@ -1,0 +1,64 @@
+.checkout-container {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .separator {
+        border-bottom: 3px solid black;
+        &__purple {
+            border-bottom: 3px solid #a736c3;
+            width: 50px
+        }
+    }
+    .features {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        @media (min-width: 900px) {
+            max-height: 150px;
+        }
+        max-height: 500px;     
+        gap: 1rem
+    }
+    .promotion-container {
+        display: flex;
+        gap: 2rem;
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
+        .promotion-card {
+            width: 300px;
+            padding: 1rem;
+            font-weight: bold;
+            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border:1px solid white;
+
+            cursor: pointer;
+            &:hover {
+                border:1px solid purple;
+            }
+            &__uppercase {
+                text-transform: uppercase;
+            font-weight: bold;
+            }
+        }
+    }
+    .summary-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+    }
+   
+}
