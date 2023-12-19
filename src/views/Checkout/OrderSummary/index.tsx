@@ -1,4 +1,5 @@
 import {
+  Button,
   H2,
   H4,
   Paragraph2,
@@ -7,7 +8,7 @@ import {
   Paragraph6,
 } from "@finetwork/ui";
 import "./styles.scss";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 const OrderSummary = ({
   promotion,
   price,
@@ -15,6 +16,7 @@ const OrderSummary = ({
   promotion: number;
   price: number;
 }) => {
+  const [follow, setFollow] = useState<boolean>(false);
   const priceString = useMemo(() => {
     return price.toFixed(2).replace(".", "'");
   }, [price]);
@@ -24,7 +26,7 @@ const OrderSummary = ({
       const result = price + 96.8;
       return result.toFixed(2).replace(".", "'");
     } else if (promotion === 0) {
-      return price.toFixed(2).replace(".", "'");
+      return priceString;
     }
   }, [promotion]);
   return (
@@ -89,6 +91,28 @@ const OrderSummary = ({
             <H2>{priceString}€</H2>
           </div>
         </div>
+      </div>
+      <div className="separator" />
+      <div className="terms-container ">
+        <div className="terms">
+          <input
+            type="checkbox"
+            onClick={() => setFollow(!follow)}
+            checked={follow}
+          />
+          <label>
+            He leído y acepto los costes y la nuevas condiciones asociadas al
+            cambio de tarfia, módulo de ahorro y/o promoción, así como la
+            política de desentimiento, y solicito que los servicios comiencen a
+            presentarse en el siguiente ciclo de facturación.
+          </label>
+        </div>
+        <Button
+          kind={follow ? "primary" : "secondary"}
+          className={follow ? "submit-button" : "submit-button__disabled"}
+        >
+          <label>Aceptar y continuar tarifa</label>
+        </Button>
       </div>
     </>
   );
