@@ -4,7 +4,6 @@ import Promotion from "./Promotion";
 import OrderSummary from "./OrderSummary";
 import useLogic from "./logic";
 import MyForm from "./FormUser/form";
-import Footer from "../../components/Footer";
 const Checkout = () => {
   const {
     description,
@@ -47,7 +46,6 @@ const Checkout = () => {
           </>
         )}
       </article>
-      <Footer />
     </>
   );
 };

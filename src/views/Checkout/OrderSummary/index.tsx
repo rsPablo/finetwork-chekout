@@ -31,18 +31,26 @@ const OrderSummary = ({
   }, [promotion]);
   return (
     <>
-      <H4>03. Resumen de tu pedido</H4>
+      <H4 css={{ fontFamily: "Druk sans" }}>03. Resumen de tu pedido</H4>
       <div className="summary-container">
         <H4>Tu Tarifa</H4>
         <div className="row">
-          <Paragraph5 css={{ fontWeight: "bold" }}>Fibra 300Mbps</Paragraph5>
-          <Paragraph2 css={{ fontWeight: "bold" }}>{priceString}€</Paragraph2>
+          <Paragraph5 css={{ fontFamily: "Druk sans" }}>
+            Fibra 300Mbps
+          </Paragraph5>
+          <Paragraph2 css={{ fontFamily: "Druk sans" }}>
+            {priceString}€
+          </Paragraph2>
         </div>
-        <Paragraph5 css={{ fontWeight: "bold" }}>10GB + Ilimitadas</Paragraph5>
+        <Paragraph5 css={{ fontFamily: "Druk sans" }}>
+          10GB + Ilimitadas
+        </Paragraph5>
         {promotion === 0 && (
           <div className="row">
-            <Paragraph6 css={{ fontWeight: "bold" }}>Permanencia</Paragraph6>
-            <Paragraph6 css={{ fontWeight: "bold", color: "green" }}>
+            <Paragraph6 css={{ fontFamily: "Druk sans" }}>
+              Permanencia
+            </Paragraph6>
+            <Paragraph6 css={{ fontFamily: "Druk sans", color: "green" }}>
               3 Meses
             </Paragraph6>
           </div>
@@ -52,35 +60,35 @@ const OrderSummary = ({
       <div className="summary-container">
         <H4>El primer mes pagarás</H4>
         <div className="row">
-          <Paragraph5 css={{ fontWeight: "bold" }}>
+          <Paragraph5 css={{ fontFamily: "Druk sans" }}>
             Envió y Activación de SIM
           </Paragraph5>
-          <Paragraph5 css={{ fontWeight: "bold", color: "green" }}>
+          <Paragraph5 css={{ fontFamily: "Druk sans", color: "green" }}>
             0.00€
           </Paragraph5>
         </div>
         <div className="row">
-          <Paragraph5 css={{ fontWeight: "bold" }}>Instalación</Paragraph5>
-          <Paragraph5 css={{ fontWeight: "bold" }}>96.80€</Paragraph5>
+          <Paragraph5 css={{ fontFamily: "Druk sans" }}>Instalación</Paragraph5>
+          <Paragraph5 css={{ fontFamily: "Druk sans" }}>96.80€</Paragraph5>
         </div>
         {promotion === 0 && (
           <div className="row">
-            <Paragraph5 css={{ fontWeight: "bold" }}>
+            <Paragraph5 css={{ fontFamily: "Druk sans" }}>
               Descuento de Instalación
             </Paragraph5>
-            <Paragraph5 css={{ fontWeight: "bold", color: "green" }}>
+            <Paragraph5 css={{ fontFamily: "Druk sans", color: "green" }}>
               - 96.80€
             </Paragraph5>
           </div>
         )}
         <div style={{ display: "flex", justifyContent: "end" }}>
-          <H2>{total}€</H2>
+          <H2 css={{ fontFamily: "Druk sans" }}>{total}€</H2>
         </div>
       </div>
       <div className="separator" />
       <div className="summary-container">
         <div className="row">
-          <Paragraph3 css={{ fontWeight: "bold" }}>
+          <Paragraph3 css={{ fontFamily: "Druk sans" }}>
             Todos los meses pagarás
           </Paragraph3>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
@@ -88,7 +96,7 @@ const OrderSummary = ({
               <Paragraph6>TOTAL </Paragraph6>
               <Paragraph6>IVA incluido</Paragraph6>
             </div>
-            <H2>{priceString}€</H2>
+            <H2 css={{ fontFamily: "Druk sans" }}>{priceString}€</H2>
           </div>
         </div>
       </div>
@@ -97,7 +105,7 @@ const OrderSummary = ({
         <div className="terms">
           <input
             type="checkbox"
-            onClick={() => setFollow(!follow)}
+            onChange={() => setFollow(!follow)}
             checked={follow}
           />
           <label>

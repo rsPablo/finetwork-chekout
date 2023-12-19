@@ -9,8 +9,6 @@ const HomePage = () => {
     <div>
       <Header />
       <ProductsCard listProducts={listProducts} />
-      <section></section>
-      <footer></footer>
     </div>
   );
 };

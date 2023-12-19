@@ -12,7 +12,7 @@ const Promotion: FC<PromotioProps> = ({
 }) => {
   return (
     <>
-      <H4>01. Configura tu tarifa</H4>
+      <H4 css={{ fontFamily: "Druk sans" }}>01. Configura tu tarifa</H4>
       <H3>{name}</H3>
       <div className="separator__purple" />
       <Paragraph4>{description}</Paragraph4>

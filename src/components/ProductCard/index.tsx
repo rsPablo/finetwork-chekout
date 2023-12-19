@@ -46,6 +46,7 @@ const ProductCard: FC<ProductCardProps> = ({ displayName, price }) => {
           highLightKind="secondary"
           css={{
             color: "#000",
+            fontFamily: "Druk sans",
           }}
         >
           {`${price}€`}

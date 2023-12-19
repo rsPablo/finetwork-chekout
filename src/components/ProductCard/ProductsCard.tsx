@@ -8,7 +8,13 @@ const ProductsCard: FC<{
   return (
     <div className="products-container">
       {listProducts?.map((el) => {
-        return <ProductCard displayName={el.displayName} price={el.price} />;
+        return (
+          <ProductCard
+            key={el.displayName}
+            displayName={el.displayName}
+            price={el.price}
+          />
+        );
       })}
     </div>
   );

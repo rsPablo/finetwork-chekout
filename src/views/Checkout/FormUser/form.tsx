@@ -26,7 +26,7 @@ const MyForm: FC = () => {
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         {() => (
           <>
-            <H4>02. Titular del contrato</H4>
+            <H4 css={{ fontFamily: "Druk sans" }}>02. Titular del contrato</H4>
             <Form className="formik-container">
               <div>
                 <label htmlFor="nif">Documento de identidad</label>

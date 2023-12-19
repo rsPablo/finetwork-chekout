@@ -20,6 +20,14 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <RouterProvider router={router} />
+      <footer>
+        <div className="finetwork-svg" />
+        <div>
+          <div className="fb" />
+          <div className="yt" />
+          <div />
+        </div>
+      </footer>
     </ThemeProvider>
   </React.StrictMode>
 );

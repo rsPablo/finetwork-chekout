@@ -4,17 +4,51 @@
 }
 @font-face {
   font-family: "Druk sans";
-  src:  url("./assets/fonts/Druk-Medium-Trial.ttf") format("truetype");
+  src: url("./assets/fonts/DrukText-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 * {
   margin: 0;
 }
 #root {
-  font-family: Nunito sans, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Nunito sans, Druk sans, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 body {
-  background-color: #eff2fc;
   min-height: 100vh;
+  background-color: #eff2fc;
+  padding-bottom: 8rem;
+  position: relative;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .finetwork-svg {
+    background-image: url('./assets/logo/finetwork_ng.svg');
+    width: 100px;
+    height: 50px;
+    background-size: contain; 
+    background-repeat: no-repeat;
+  }
+  .fb {
+    @extend .finetwork-svg;
+    background-image: url('./assets/social/facebookIcon.svg');
+    width: 18px;
+    height: 18px;
+  }
+  .yt {
+    @extend .fb;
+    background-image: url('./assets/social/youtube.svg');
+   
+  }
 }
 
 
