@@ -41,6 +41,10 @@
   div:last-child {
     input {
       width: calc(500px + 1rem);
+      @media (max-width: 597px) {
+        width: 250px;
+        
+      }
     }
   }
   

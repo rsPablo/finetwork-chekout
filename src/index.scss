@@ -18,19 +18,41 @@
 body {
   min-height: 100vh;
   background-color: #eff2fc;
-  padding-bottom: 8rem;
+  padding-bottom: 12rem;
+  padding-top: 6rem;
   position: relative;
+}
+
+header {
+  background-color: white;
+  color: white;
+  padding: 1.5rem;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  .finetwork-svb-black {
+    background-image: url('./assets/logo/finetwork_black.svg');
+    min-width: 140px;
+    height: 25px;
+    background-size: contain; 
+    background-repeat: no-repeat;
+  }
+  span {
+    color: black;
+  }
+
 }
 
 footer {
   background-color: black;
   color: white;
-  padding: 2rem;
+  padding: 1.5rem;
   position: absolute;
   bottom: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+
   .finetwork-svg {
     background-image: url('./assets/logo/finetwork_ng.svg');
     width: 100px;
@@ -38,17 +60,23 @@ footer {
     background-size: contain; 
     background-repeat: no-repeat;
   }
-  .fb {
-    @extend .finetwork-svg;
-    background-image: url('./assets/social/facebookIcon.svg');
-    width: 18px;
-    height: 18px;
+  .separator {
+    border-bottom: 1px solid white;
   }
-  .yt {
-    @extend .fb;
-    background-image: url('./assets/social/youtube.svg');
-   
+  .options {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    font-size: 15px;
+    span {
+      &:hover {
+        color: purple;
+        cursor: pointer;
+        user-select: none;
+      }
+    }
   }
+ 
 }
 
 

@@ -116,6 +116,7 @@ const OrderSummary = ({
           </label>
         </div>
         <Button
+          css={{ width: "50px" }}
           kind={follow ? "primary" : "secondary"}
           className={follow ? "submit-button" : "submit-button__disabled"}
         >

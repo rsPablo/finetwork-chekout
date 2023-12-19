@@ -3,7 +3,7 @@ import "./styles.scss";
 import Promotion from "./Promotion";
 import OrderSummary from "./OrderSummary";
 import useLogic from "./logic";
-import MyForm from "./FormUser/form";
+import MyForm from "./FormUser";
 const Checkout = () => {
   const {
     description,
