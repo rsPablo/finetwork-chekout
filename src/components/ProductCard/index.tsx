@@ -6,7 +6,6 @@ import {
   CardHeader,
   H2,
   Button,
-  H3,
   H4,
 } from "@finetwork/ui";
 import { useNavigate } from "react-router-dom";

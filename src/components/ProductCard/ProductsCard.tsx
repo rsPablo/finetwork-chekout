@@ -1,6 +1,7 @@
 import { FC } from "react";
 import ProductCard from ".";
 import "./styles.scss";
+
 const ProductsCard: FC<{
   listProducts: { displayName: string; price: string }[] | undefined;
 }> = ({ listProducts }) => {

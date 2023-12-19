@@ -1,0 +1,41 @@
+.features {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @media (min-width: 900px) {
+        max-height: 150px;
+    }
+    max-height: 500px;     
+    gap: 1rem
+}
+.promotion-container {
+    display: flex;
+    gap: 1rem;
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
+    .promotion-card {
+        width: 300px;
+        padding: 1rem;
+        font-weight: bold;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border:2px solid white;
+        cursor: pointer;
+        user-select: none;
+        &__selected {
+            @extend .promotion-card;
+            border:2px solid purple;
+        }
+        &:hover {
+            border:2px solid purple;
+        }
+        &__uppercase {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+       
+    }
+}

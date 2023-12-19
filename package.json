@@ -12,6 +12,7 @@
   "dependencies": {
     "@finetwork/ui": "^1.3.6",
     "@stitches/react": "^1.2.8",
+    "formik": "^2.4.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.0"
