@@ -9,12 +9,15 @@ import {
 } from "@finetwork/ui";
 import "./styles.scss";
 import { useMemo, useState } from "react";
+
 const OrderSummary = ({
   promotion,
   price,
+  handleSubmit,
 }: {
   promotion: number;
   price: number;
+  handleSubmit: () => void;
 }) => {
   const [follow, setFollow] = useState<boolean>(false);
   const priceString = useMemo(() => {
@@ -119,6 +122,7 @@ const OrderSummary = ({
           css={{ width: "50px" }}
           kind={follow ? "primary" : "secondary"}
           className={follow ? "submit-button" : "submit-button__disabled"}
+          onClick={handleSubmit}
         >
           <label>Aceptar y continuar tarifa</label>
         </Button>

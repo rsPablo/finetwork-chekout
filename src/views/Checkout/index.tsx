@@ -15,6 +15,8 @@ const Checkout = () => {
     setShowForm,
     showForm,
     price,
+    handleSubmit,
+    formikRef,
   } = useLogic();
 
   return (
@@ -40,9 +42,13 @@ const Checkout = () => {
         {showForm && (
           <>
             <div className="separator" />
-            <MyForm />
+            <MyForm formRef={formikRef} />
             <div className="separator" />
-            <OrderSummary promotion={promotion} price={price} />
+            <OrderSummary
+              promotion={promotion}
+              price={price}
+              handleSubmit={handleSubmit}
+            />
           </>
         )}
       </article>

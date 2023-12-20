@@ -31,7 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <span>Aviso legal</span>
           <span>Pólitica de cookies</span>
           <span>Política de privacidad</span>
-          <span>Términso y condiciones</span>
+          <span>Términos y condiciones</span>
         </div>
       </footer>
     </ThemeProvider>
