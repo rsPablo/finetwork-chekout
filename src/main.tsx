@@ -6,14 +6,17 @@ import theme from "../styles/theme.ts";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./views/HomePage/index.tsx";
 import Checkout from "./views/Checkout/index.tsx";
+import ErrorPage from "./views/ErrorPage/index.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/checkout",
     element: <Checkout />,
+    errorElement: <ErrorPage />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(

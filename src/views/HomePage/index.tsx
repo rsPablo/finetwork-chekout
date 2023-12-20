@@ -1,12 +1,13 @@
 import { memo } from "react";
 import useProducts from "../../hook/useProducts";
 import ProductsCard from "../../components/ProductCard/ProductsCard";
+import Loader from "../../components/Loader";
 
 const HomePage = () => {
-  const { listProducts } = useProducts();
+  const { listProducts, loading } = useProducts();
   return (
     <div>
-      <ProductsCard listProducts={listProducts} />
+      {!loading ? <ProductsCard listProducts={listProducts} /> : <Loader />}
     </div>
   );
 };

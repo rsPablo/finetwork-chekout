@@ -3,14 +3,19 @@ import { OfferingProducts } from "../model/OfferingProducts";
 
 const useProducts = () => {
   const [response, setResponse] = useState<OfferingProducts>();
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const productsFetch = async () => {
-      const response = await fetch(
-        "https://gateway.finetwork.com/product/offering/products?page=2&size=3"
-      );
-      const products: OfferingProducts = await response.json();
-      setResponse(products);
+      try {
+        const response = await fetch(
+          "https://gateway.finetwork.com/product/offering/products?page=2&size=3"
+        );
+        const products: OfferingProducts = await response.json();
+        setResponse(products);
+      } finally {
+        setLoading(false);
+      }
     };
     productsFetch();
   }, []);
@@ -26,6 +31,7 @@ const useProducts = () => {
 
   return {
     listProducts,
+    loading,
   };
 };
 
